@@ -303,7 +303,7 @@ std::string BAFpileup::createPileUpFile(std::string outputDir, std::string samto
     }  else   {
          command = samtools_path + " mpileup -f "+fastaFile+" -d 8000 -Q "+int2string(minQualPerPos)+" -l " + intersected + " " + control_MateFile + " > " + minipileup; //discard reads wit 0 mapping quality
     }
-    printf(command)
+    printf(command);
 
     stream =
     #if defined(_WIN32)
